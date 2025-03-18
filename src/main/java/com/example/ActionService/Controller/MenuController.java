@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/menu")
+@RequestMapping("/action/api/menu")
 public class MenuController {
 
     private final MenuService menuService;
