@@ -9,6 +9,7 @@ import com.example.ActionService.Repository.RestaurantRepository;
 import com.example.ActionService.Repository.UserRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -32,30 +33,12 @@ public class OrderService {
         this.rabbitTemplate = rabbitTemplate;
         this.objectMapper = objectMapper;
     }
+//
+//     @Bean
+//     public ObjectMapper objectMapper1(){
+//        return  new ObjectMapper();
+//     }
 
-//    public Map<String, Object> createOrder(Long userId, Long restaurantId, Order order) {
-//        Map<String, Object> response = new HashMap<>();
-//
-//        User user = userRepository.findById(userId)
-//                .orElseThrow(() -> new RuntimeException("User not found"));
-//
-//        Restaurant restaurant = restaurantRepository.findById(restaurantId)
-//                .orElseThrow(() -> new RuntimeException("Restaurant not found"));
-//
-//        order.setUser(user);
-//        order.setRestaurant(restaurant);
-//        order.setStatus(Order.Status.PLACED);
-//        order.setPaymentStatus(Order.PaymentStatus.PENDING);
-//        order.setDate(LocalDateTime.now());
-//
-//        Order savedOrder = orderRepository.save(order);
-//
-//        response.put("status", 201);
-//        response.put("message", "Order created successfully!");
-//        response.put("data", savedOrder);
-//
-//        return response;
-//    }
 
     public Map<String, Object> createOrder(Long userId, Long restaurantId, Order order) {
         Map<String, Object> response = new HashMap<>();

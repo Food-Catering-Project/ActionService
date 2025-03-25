@@ -1,7 +1,6 @@
 package com.example.ActionService.Service;
 
 import com.example.ActionService.Entity.CateringOrder;
-import com.example.ActionService.Entity.Menu;
 import com.example.ActionService.Repository.CateringOrderRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
