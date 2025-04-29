@@ -11,7 +11,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @EnableRabbit
 public class CateringConfigRabbitMQ {
-    // Queue, Exchange, Routing Key names
+
+    
     public static final String CateringQueue_Name = "CateringorderQueue";
     public static final String CateringExchange_Name = "CateringorderExchange";
     public static final String CateringRouting_Key = "Cateringorder.created";
