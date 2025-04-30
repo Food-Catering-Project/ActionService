@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 @EnableRabbit
 public class CateringConfigRabbitMQ {
 
-    
+
     public static final String CateringQueue_Name = "CateringorderQueue";
     public static final String CateringExchange_Name = "CateringorderExchange";
     public static final String CateringRouting_Key = "Cateringorder.created";
